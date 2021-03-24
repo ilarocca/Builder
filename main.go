@@ -19,6 +19,4 @@ func main() {
 	utils.ProjectType()
 	// copy hidden into work dir, install dependencies, compile source code from repo
 
-	//outputs user's metadata
-	utils.Metadata()
 }

@@ -36,12 +36,15 @@ func ProjectType() {
 			case "main.go":
 				//executes go compiler
 				CopyDir()
+				Metadata()
 				compile.Go(filePath)
 			case "package.json":
 				//executes node compiler
+				Metadata()
 				compile.Npm()
 			case "pom.xml":
 				//executes java compiler
+				Metadata()
 				CopyDir() 
 				filePath2, _ := exec.Command("find", parentDir+"/workspace", "-name", "*.java").CombinedOutput()
 
